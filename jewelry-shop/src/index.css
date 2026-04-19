@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 38 75% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 38 30% 95%;
+    --secondary-foreground: 38 75% 25%;
+    --muted: 38 20% 96%;
+    --muted-foreground: 38 10% 46%;
+    --accent: 38 50% 90%;
+    --accent-foreground: 38 75% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 20% 88%;
+    --input: 38 20% 88%;
+    --ring: 38 75% 45%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 38 75% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 38 30% 95%;
+    --sidebar-accent-foreground: 38 75% 25%;
+    --sidebar-border: 38 20% 91%;
+    --sidebar-ring: 38 75% 45%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 38 75% 55%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 38 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 38 75% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 38 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom jewelry shop styles */
+.gold-gradient {
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 40%, #ffd700 70%, #daa520 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #b8860b, #daa520, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.carousel-slide {
+  transition: opacity 0.7s ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-btn {
+  background: linear-gradient(
+    90deg,
+    #b8860b 25%,
+    #ffd700 50%,
+    #b8860b 75%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2.5s linear infinite;
+}
